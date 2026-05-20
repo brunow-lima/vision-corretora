@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zapelli Corretora de Seguros & Consórcios</title>
+    <meta name="description" content="+10 anos ajudando clientes. Consultoria para acelerar sua contemplação. Especialista em Seguros & Consórcios.">
+    <meta name="keywords" content="Consórcio, Seguros, Corretora de Seguros, Zapelli, Planejamento Financeiro, Seguro de Vida, Consórcio Imobiliário, Consórcio de Veículos">
+    
+    <!-- Open Graph / WhatsApp / Facebook Preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.zapelli.com.br/">
+    <meta property="og:title" content="Zapelli Corretora de Seguros & Consórcios">
+    <meta property="og:description" content="Proteja o que importa e conquiste seus objetivos com planejamento e segurança. +10 anos de experiência.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200&h=630&auto=format&fit=crop">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Oswald:wght@200;300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        oswald: ['Oswald', 'sans-serif'],
+                    },
+                    colors: {
+                        gold: {
+                            400: '#D4AF37', // Gold base
+                            500: '#B5942F', // Darker gold
+                            600: '#997A24'
+                        }
+                    },
+                    animation: {
+                        'spin-slow': 'spin 8s linear infinite',
+                        'beam-fall': 'beam-fall 6s linear infinite',
+                    },
+                    keyframes: {
+                        'beam-fall': {
+                            '0%': { transform: 'translateY(-100%)', opacity: '0' },
+                            '5%': { opacity: '0.5' },
+                            '50%': { opacity: '1' },
+                            '95%': { opacity: '0.5' },
+                            '100%': { transform: 'translateY(120vh)', opacity: '0' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="text-white font-sans antialiased overflow-x-hidden selection:bg-gold-500/30">
+
+    <!-- Hero Background Layer -->
+    <div class="fixed z-0 top-0 right-0 bottom-0 left-0 w-full h-full pointer-events-none">
+        <img alt="Zapelli Seguros Premium" class="w-full h-full object-cover object-[15%_center] opacity-50 mix-blend-luminosity scale-105" src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop"/>
+        
+        <!-- Premium Overlays -->
+        <div class="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/85 to-transparent w-full md:w-4/5"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-[#050505]/60 via-transparent to-[#050505]/90"></div>
+        
+        <!-- Subtle Gold Glow in the background -->
+        <div class="absolute top-1/4 -left-32 w-[600px] h-[600px] bg-gold-600/10 rounded-full blur-[120px]"></div>
+    </div>
+
+    <!-- Background Beams (Lumina effect) -->
+    <div class="fixed inset-0 z-0 pointer-events-none flex w-full max-w-7xl mx-auto opacity-30">
+        <div class="flex-1 border-l border-white/5 h-full relative overflow-hidden"></div>
+        <div class="flex-1 border-l border-white/5 h-full relative overflow-hidden">
+            <div class="absolute top-0 -left-[1px] w-[1px] h-64 bg-gradient-to-b from-transparent via-gold-500/60 to-transparent animate-beam-fall" style="animation-duration: 8s;"></div>
+        </div>
+        <div class="flex-1 border-l border-white/5 h-full relative overflow-hidden"></div>
+        <div class="flex-1 border-l border-white/5 h-full relative overflow-hidden">
+            <div class="absolute top-0 -left-[1px] w-[1px] h-96 bg-gradient-to-b from-transparent via-gold-500/80 to-transparent animate-beam-fall" style="animation-delay: 2s; animation-duration: 6s;"></div>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav class="fixed z-50 w-full top-0 left-0 right-0 flex justify-center transition-all duration-300" id="navbar-wrapper">
+        <div id="nav-content" class="nav-transparent transition-all duration-500 w-full max-w-[1400px] px-6 md:px-12 flex items-center justify-between border-b border-transparent">
+            
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 shrink-0 group">
+                <div class="w-10 h-10 rounded-full border border-gold-500/30 flex items-center justify-center bg-black/50 group-hover:border-gold-400 transition-colors">
+                    <!-- Zapelli "Z" concept -->
+                    <span class="font-oswald text-2xl text-gold-400">Z</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl font-oswald font-medium tracking-widest text-white leading-none">ZAPELLI</span>
+                    <span class="text-[10px] font-sans tracking-[0.2em] text-gray-400 uppercase leading-none mt-1">Seguros & Consórcios</span>
+                </div>
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex gap-10 items-center absolute left-1/2 -translate-x-1/2">
+                <a class="text-xs uppercase tracking-widest hover:text-gold-400 transition-colors font-medium text-gray-300" href="#">Início</a>
+                <a class="text-xs uppercase tracking-widest hover:text-gold-400 transition-colors font-medium text-gray-300" href="#solucoes">Consórcios</a>
+                <a class="text-xs uppercase tracking-widest hover:text-gold-400 transition-colors font-medium text-gray-300" href="#solucoes">Seguros</a>
+                <a class="text-xs uppercase tracking-widest hover:text-gold-400 transition-colors font-medium text-gray-300" href="#diferenciais">Sobre Nós</a>
+                <a class="text-xs uppercase tracking-widest hover:text-gold-400 transition-colors font-medium text-gray-300" href="#contato">Contato</a>
+            </div>
+
+            <!-- Action Area -->
+            <div class="flex gap-4 items-center shrink-0">
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-white hover:text-gold-400 transition-colors">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+                <a class="hidden md:flex group items-center justify-center bg-transparent border border-white/20 hover:border-gold-400 hover:bg-gold-500/10 rounded-full py-2.5 px-6 transition-all duration-300" href="https://wa.me/5511917847600?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20uma%20simula%C3%A7%C3%A3o." target="_blank">
+                    <span class="uppercase text-[11px] font-bold tracking-widest text-white group-hover:text-gold-400 transition-colors">
+                        Simular Agora
+                    </span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 z-[110] bg-[#050505]/95 backdrop-blur-xl translate-x-full transition-transform duration-500 lg:hidden flex flex-col pt-24 px-8 pb-8">
+        <button id="close-menu-btn" class="absolute top-6 right-6 p-2 text-white hover:text-gold-400 transition-colors">
+            <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
+        <div class="flex flex-col gap-8 mt-10">
+            <a class="text-2xl uppercase tracking-widest hover:text-gold-400 transition-colors font-medium text-white border-b border-white/5 pb-4" href="#">Início</a>
+            <a class="text-2xl uppercase tracking-widest hover:text-gold-400 transition-colors font-medium text-white border-b border-white/5 pb-4" href="#solucoes">Consórcios</a>
+            <a class="text-2xl uppercase tracking-widest hover:text-gold-400 transition-colors font-medium text-white border-b border-white/5 pb-4" href="#seguros">Seguros</a>
+            <a class="text-2xl uppercase tracking-widest hover:text-gold-400 transition-colors font-medium text-white border-b border-white/5 pb-4" href="#depoimentos">Depoimentos</a>
+            <a class="text-2xl uppercase tracking-widest hover:text-gold-400 transition-colors font-medium text-white pb-4" href="#contato-info">Contato</a>
+            
+            <a href="https://wa.me/5511917847600?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20uma%20simula%C3%A7%C3%A3o." target="_blank" class="btn-gold group flex items-center justify-center gap-3 rounded-full h-[54px] w-full mt-4 shadow-[0_0_30px_-5px_rgba(212,175,55,0.4)]">
+                <span class="uppercase text-xs font-bold tracking-widest text-black">Simular Agora</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 text-black"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Hero Section -->
+    <main class="relative z-10 flex flex-col justify-center min-h-screen pt-32 pb-20 w-full max-w-[1400px] mx-auto px-6 md:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Left Content -->
+            <div class="col-span-1 lg:col-span-7 flex flex-col items-start text-left">
+                
+                <!-- Badge / Tagline -->
+                <div class="reveal inline-flex items-center gap-3 bg-white/5 border border-white/10 rounded-full mb-8 py-1.5 pl-2 pr-5 backdrop-blur-md">
+                    <div class="bg-gold-500/20 border border-gold-500/30 rounded-full p-1 shadow-[0_0_15px_rgba(212,175,55,0.2)]">
+                        <i data-lucide="award" class="w-4 h-4 text-gold-400"></i>
+                    </div>
+                    <span class="text-xs text-gray-200 font-medium tracking-wide uppercase">
+                        +10 anos realizando objetivos
+                    </span>
+                </div>
+
+                <!-- Headline -->
+                <h1 class="reveal-blur delay-100 text-[3rem] sm:text-5xl md:text-6xl lg:text-[4rem] xl:text-[4.5rem] leading-[1.1] tracking-tight text-white font-oswald font-light mb-6">
+                    Planeje grandes conquistas.
+                    <span class="font-normal text-transparent bg-clip-text bg-gradient-to-r from-gold-400 to-[#E8C861] block mt-1 pb-3">
+                        Proteja o que importa.
+                    </span>
+                </h1>
+
+                <!-- Subheadline -->
+                <p class="reveal delay-200 text-lg md:text-xl text-gray-400 leading-relaxed font-light max-w-xl">
+                    Consórcios inteligentes para imóveis e veículos, aliados aos seguros mais importantes. <strong class="text-white font-medium">Consultoria especializada para acelerar sua contemplação.</strong>
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="reveal delay-300 flex flex-col sm:flex-row gap-5 mt-12 w-full sm:w-auto">
+                    <!-- Botão Principal Gold -->
+                    <a href="https://wa.me/5511917847600?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20uma%20simula%C3%A7%C3%A3o." target="_blank" class="btn-gold group flex items-center justify-center gap-3 rounded-full h-[54px] px-8 shadow-[0_0_30px_-5px_rgba(212,175,55,0.4)] hover:shadow-[0_0_40px_-5px_rgba(212,175,55,0.6)] transition-all hover:scale-[1.02]">
+                        <span class="uppercase text-xs font-bold tracking-widest text-black">
+                            Simular Consórcio
+                        </span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 text-black group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+
+                    <!-- Botão Secundário -->
+                    <a href="https://wa.me/5511917847600?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20uma%20simula%C3%A7%C3%A3o." target="_blank" class="group flex items-center justify-center gap-3 rounded-full h-[54px] px-8 bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/30 backdrop-blur-sm transition-all">
+                        <span class="uppercase text-xs font-bold tracking-widest text-white">
+                            Falar com Especialista
+                        </span>
+                        <i data-lucide="message-circle" class="w-4 h-4 text-white group-hover:scale-110 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Content (Trust Indicators & Partners) -->
+            <div class="col-span-1 lg:col-span-5 lg:pl-10 mt-12 lg:mt-0 flex flex-col gap-8 border-l-0 lg:border-l border-white/5">
+                
+                <!-- Experience Card -->
+                <div class="reveal delay-400 bg-white/[0.03] border border-white/5 rounded-2xl p-6 backdrop-blur-sm hover:bg-white/[0.05] transition-colors">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-full bg-gold-500/10 flex items-center justify-center border border-gold-500/20 shrink-0">
+                            <i data-lucide="target" class="w-5 h-5 text-gold-400"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-white font-semibold mb-1">Acelere sua Contemplação</h3>
+                            <p class="text-sm text-gray-400 leading-relaxed">Nossa consultoria estratégica é focada em encontrar o grupo perfeito para que você alcance seu objetivo mais rápido.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Expertise Indicators -->
+                <div class="reveal delay-500 grid grid-cols-2 gap-4">
+                    <div class="bg-black/40 border border-white/5 rounded-xl p-5 flex flex-col gap-3">
+                        <i data-lucide="shield-check" class="w-5 h-5 text-gold-400"></i>
+                        <span class="text-sm text-gray-300 font-medium">Proteção Patrimonial e Familiar</span>
+                    </div>
+                    <div class="bg-black/40 border border-white/5 rounded-xl p-5 flex flex-col gap-3">
+                        <i data-lucide="users" class="w-5 h-5 text-gold-400"></i>
+                        <span class="text-sm text-gray-300 font-medium">Atendimento 100% Consultivo</span>
+                    </div>
+                </div>
+
+                <!-- Partners -->
+                <div class="reveal delay-600 mt-6">
+                    <p class="text-[10px] font-medium text-gray-500 uppercase tracking-widest mb-5">Corretora Autorizada</p>
+                    <div class="flex flex-wrap items-center gap-5">
+                        
+                        <!-- Porto Seguro Elegant Logo -->
+                        <div class="group flex items-center gap-3 bg-white/[0.02] border border-white/5 hover:bg-white/[0.06] hover:border-white/10 rounded-full py-2 px-4 transition-all duration-300 cursor-default">
+                            <div class="w-6 h-6 rounded-full bg-[#004691] flex items-center justify-center shadow-[0_0_12px_rgba(0,70,145,0.6)] group-hover:scale-110 transition-transform">
+                                <i data-lucide="shield" class="w-3 h-3 text-white fill-white"></i>
+                            </div>
+                            <span class="text-gray-400 group-hover:text-white font-sans text-[11px] tracking-[0.2em] uppercase font-semibold transition-colors">Porto Seguro</span>
+                        </div>
+
+                        <!-- Itaú Elegant Logo -->
+                        <div class="group flex items-center gap-3 bg-white/[0.02] border border-white/5 hover:bg-white/[0.06] hover:border-white/10 rounded-full py-2 px-4 transition-all duration-300 cursor-default">
+                            <div class="w-6 h-6 rounded-[6px] bg-[#EC7000] flex items-center justify-center shadow-[0_0_12px_rgba(236,112,0,0.6)] group-hover:scale-110 transition-transform">
+                                <span class="text-white font-black text-[9px] italic font-sans tracking-tighter">Itaú</span>
+                            </div>
+                            <span class="text-gray-400 group-hover:text-white font-sans text-[11px] tracking-[0.2em] uppercase font-semibold transition-colors">Itaú Consórcios</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Section 2: Serviços & Soluções -->
+    <section id="solucoes" class="relative z-10 w-full max-w-[1400px] mx-auto px-6 md:px-12 py-24 lg:py-32 border-t border-white/5">
+        <!-- Background Light Accent -->
+        <div class="absolute top-0 right-1/4 w-[800px] h-[800px] bg-gold-600/5 rounded-full blur-[150px] pointer-events-none"></div>
+
+        <!-- Section Header -->
+        <div class="flex flex-col items-center text-center mb-16 relative z-10">
+            <h2 class="reveal text-4xl md:text-5xl lg:text-6xl font-oswald font-light tracking-tight text-white mb-6">
+                Conquiste hoje. <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 to-[#E8C861]">Proteja o amanhã.</span>
+            </h2>
+            <p class="reveal delay-100 text-gray-400 font-light text-lg md:text-xl max-w-2xl leading-relaxed">
+                Soluções inteligentes para quem deseja crescer com planejamento e viver com mais segurança.
+            </p>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 relative z-10">
+            
+            <!-- Card 1: Consórcios -->
+            <div class="reveal delay-200 group flex flex-col bg-white/[0.02] border border-white/5 rounded-[2rem] overflow-hidden hover:bg-white/[0.04] hover:border-gold-500/20 transition-all duration-500 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)] hover:-translate-y-2">
+                <!-- Image Header -->
+                <div class="relative h-64 sm:h-72 w-full overflow-hidden rounded-t-[2rem] [transform:translateZ(0)]">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/20 to-transparent z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=2070&auto=format&fit=crop" alt="Mansão de Alto Padrão" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 ease-out opacity-90 mix-blend-luminosity group-hover:mix-blend-normal">
+                    <div class="absolute bottom-6 left-8 z-20 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-gold-500/20 backdrop-blur-md flex items-center justify-center border border-gold-400/30">
+                            <i data-lucide="key" class="w-5 h-5 text-gold-400"></i>
+                        </div>
+                        <h3 class="text-2xl font-oswald text-white tracking-wide">CONSÓRCIOS</h3>
+                    </div>
+                </div>
+                
+                <!-- Card Content -->
+                <div class="flex flex-col flex-grow p-8 sm:p-10">
+                    <h4 class="text-xl sm:text-2xl font-medium text-white mb-4 leading-snug">Conquiste seu patrimônio com planejamento inteligente</h4>
+                    <p class="text-gray-400 font-light leading-relaxed mb-8">Oferecemos cartas de consórcio para imóveis e veículos com condições estratégicas e acompanhamento especializado. Uma solução inteligente para realizar objetivos sem juros abusivos.</p>
+                    
+                    <!-- Benefits List -->
+                    <ul class="flex flex-col gap-4 mb-10 mt-auto">
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-gold-400 shrink-0"></i>
+                            <span class="text-gray-300 font-light text-sm sm:text-base">Consórcio imobiliário</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-gold-400 shrink-0"></i>
+                            <span class="text-gray-300 font-light text-sm sm:text-base">Consórcio de veículos</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-gold-400 shrink-0"></i>
+                            <span class="text-gray-300 font-light text-sm sm:text-base">Planejamento financeiro inteligente</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-gold-400 shrink-0"></i>
+                            <span class="text-gray-300 font-light text-sm sm:text-base">Parcelas acessíveis</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-gold-400 shrink-0"></i>
+                            <span class="text-gray-300 font-light text-sm sm:text-base">Parcerias Itaú e Porto Seguro</span>
+                        </li>
+                    </ul>
+
+                    <!-- CTA Button -->
+                    <a href="https://wa.me/5511917847600?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20uma%20simula%C3%A7%C3%A3o." target="_blank" class="btn-gold group/btn flex items-center justify-center gap-3 rounded-full h-[54px] px-8 w-full shadow-[0_0_20px_-5px_rgba(212,175,55,0.3)] hover:shadow-[0_0_30px_-5px_rgba(212,175,55,0.5)] transition-all">
+                        <span class="uppercase text-xs font-bold tracking-widest text-black">Quero simular meu consórcio</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 text-black group-hover/btn:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 2: Seguros -->
+            <div id="seguros" class="reveal delay-300 group flex flex-col bg-white/[0.02] border border-white/5 rounded-[2rem] overflow-hidden hover:bg-white/[0.04] hover:border-gold-500/20 transition-all duration-500 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)] hover:-translate-y-2 scroll-mt-32">
+                <!-- Image Header -->
+                <div class="relative h-64 sm:h-72 w-full overflow-hidden rounded-t-[2rem] [transform:translateZ(0)]">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/20 to-transparent z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=2070&auto=format&fit=crop" alt="Proteção familiar" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 ease-out opacity-90 mix-blend-luminosity group-hover:mix-blend-normal">
+                    <div class="absolute bottom-6 left-8 z-20 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-gold-500/20 backdrop-blur-md flex items-center justify-center border border-gold-400/30">
+                            <i data-lucide="shield" class="w-5 h-5 text-gold-400"></i>
+                        </div>
+                        <h3 class="text-2xl font-oswald text-white tracking-wide">SEGUROS</h3>
+                    </div>
+                </div>
+                
+                <!-- Card Content -->
+                <div class="flex flex-col flex-grow p-8 sm:p-10">
+                    <h4 class="text-xl sm:text-2xl font-medium text-white mb-4 leading-snug">Proteção completa para sua vida e patrimônio</h4>
+                    <p class="text-gray-400 font-light leading-relaxed mb-8">Trabalhamos com os seguros mais importantes do mercado para garantir tranquilidade, segurança e proteção para você, sua família e seus bens.</p>
+                    
+                    <!-- Services List -->
+                    <ul class="flex flex-col gap-4 mb-10 mt-auto">
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-gold-400 shrink-0"></i>
+                            <span class="text-gray-300 font-light text-sm sm:text-base">Seguro de Vida</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-gold-400 shrink-0"></i>
+                            <span class="text-gray-300 font-light text-sm sm:text-base">Seguro Automóvel</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-gold-400 shrink-0"></i>
+                            <span class="text-gray-300 font-light text-sm sm:text-base">Seguro Residencial</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 text-gold-400 shrink-0"></i>
+                            <span class="text-gray-300 font-light text-sm sm:text-base">Seguro Saúde</span>
+                        </li>
+                        <!-- Elemento fantasma para igualar a altura das listas (já que a outra tem 5 itens e esta tem 4) -->
+                        <li class="hidden lg:flex items-center gap-3 opacity-0 pointer-events-none">
+                            <i data-lucide="check-circle-2" class="w-5 h-5 shrink-0"></i>
+                            <span class="text-sm sm:text-base">Alinhamento vertical</span>
+                        </li>
+                    </ul>
+
+                    <!-- CTA Button -->
+                    <a href="https://wa.me/5511917847600?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20uma%20simula%C3%A7%C3%A3o." target="_blank" class="group/btn flex items-center justify-center gap-3 rounded-full h-[54px] px-8 w-full bg-white/5 border border-white/10 hover:bg-gold-500/10 hover:border-gold-400/50 backdrop-blur-sm transition-all">
+                        <span class="uppercase text-xs font-bold tracking-widest text-white group-hover/btn:text-gold-400 transition-colors">Solicitar cotação</span>
+                        <i data-lucide="shield-check" class="w-4 h-4 text-white group-hover/btn:text-gold-400 group-hover/btn:scale-110 transition-all"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section 3: Credibilidade e Diferenciais -->
+    <section id="diferenciais" class="relative z-10 w-full max-w-[1400px] mx-auto px-6 md:px-12 py-24 lg:py-32 border-t border-white/5 overflow-hidden">
+        
+        <!-- Subtle Background Glow -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-gold-600/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <!-- Section Header -->
+        <div class="flex flex-col items-center text-center mb-16 relative z-10">
+            <h2 class="reveal text-3xl md:text-4xl lg:text-5xl font-oswald font-light tracking-tight text-white mb-6 max-w-4xl leading-tight">
+                Confiança construída através de <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 to-[#E8C861] block sm:inline">planejamento e proteção.</span>
+            </h2>
+            <p class="reveal delay-100 text-gray-400 font-light text-base md:text-lg max-w-2xl leading-relaxed">
+                Mais do que oferecer soluções financeiras, entregamos segurança, transparência e acompanhamento especializado em cada etapa da jornada do cliente.
+            </p>
+        </div>
+
+        <!-- Grid de Diferenciais -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
+            
+            <!-- Bloco 1: Atendimento Consultivo -->
+            <div class="reveal delay-200 group p-8 rounded-3xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] hover:border-gold-500/30 transition-all duration-500 flex flex-col items-start hover:-translate-y-1 shadow-lg hover:shadow-[0_15px_30px_-10px_rgba(212,175,55,0.1)]">
+                <div class="w-12 h-12 rounded-full bg-gold-500/10 flex items-center justify-center border border-gold-500/20 mb-6 group-hover:scale-110 group-hover:bg-gold-500/20 transition-all duration-500">
+                    <i data-lucide="headphones" class="w-5 h-5 text-gold-400"></i>
+                </div>
+                <h3 class="text-lg font-medium text-white mb-3">Atendimento Consultivo</h3>
+                <p class="text-sm text-gray-400 font-light leading-relaxed">Entendemos seu momento e suas necessidades antes de indicar qualquer solução financeira.</p>
+            </div>
+
+            <!-- Bloco 2: Parcerias Sólidas -->
+            <div class="reveal delay-300 group p-8 rounded-3xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] hover:border-gold-500/30 transition-all duration-500 flex flex-col items-start hover:-translate-y-1 shadow-lg hover:shadow-[0_15px_30px_-10px_rgba(212,175,55,0.1)]">
+                <div class="w-12 h-12 rounded-full bg-gold-500/10 flex items-center justify-center border border-gold-500/20 mb-6 group-hover:scale-110 group-hover:bg-gold-500/20 transition-all duration-500">
+                    <i data-lucide="award" class="w-5 h-5 text-gold-400"></i>
+                </div>
+                <h3 class="text-lg font-medium text-white mb-3">Parcerias de Credibilidade</h3>
+                <p class="text-sm text-gray-400 font-light leading-relaxed">Trabalhamos com administradoras e seguradoras reconhecidas nacionalmente, como Itaú e Porto Seguro.</p>
+            </div>
+
+            <!-- Bloco 3: Segurança e Transparência -->
+            <div class="reveal delay-400 group p-8 rounded-3xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] hover:border-gold-500/30 transition-all duration-500 flex flex-col items-start hover:-translate-y-1 shadow-lg hover:shadow-[0_15px_30px_-10px_rgba(212,175,55,0.1)]">
+                <div class="w-12 h-12 rounded-full bg-gold-500/10 flex items-center justify-center border border-gold-500/20 mb-6 group-hover:scale-110 group-hover:bg-gold-500/20 transition-all duration-500">
+                    <i data-lucide="lock" class="w-5 h-5 text-gold-400"></i>
+                </div>
+                <h3 class="text-lg font-medium text-white mb-3">Segurança e Transparência</h3>
+                <p class="text-sm text-gray-400 font-light leading-relaxed">Processos claros, atendimento humanizado e suporte especializado do início ao fim.</p>
+            </div>
+
+            <!-- Bloco 4: Soluções Completas -->
+            <div class="reveal delay-500 group p-8 rounded-3xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] hover:border-gold-500/30 transition-all duration-500 flex flex-col items-start hover:-translate-y-1 shadow-lg hover:shadow-[0_15px_30px_-10px_rgba(212,175,55,0.1)]">
+                <div class="w-12 h-12 rounded-full bg-gold-500/10 flex items-center justify-center border border-gold-500/20 mb-6 group-hover:scale-110 group-hover:bg-gold-500/20 transition-all duration-500">
+                    <i data-lucide="layout-dashboard" class="w-5 h-5 text-gold-400"></i>
+                </div>
+                <h3 class="text-lg font-medium text-white mb-3">Soluções Completas</h3>
+                <p class="text-sm text-gray-400 font-light leading-relaxed">Conquiste patrimônio e proteja seu futuro em um único lugar, de forma integrada e inteligente.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section 4: Depoimentos (Prova Social) -->
+    <section id="depoimentos" class="relative z-10 w-full max-w-[1400px] mx-auto px-6 md:px-12 py-24 border-t border-white/5">
+        <!-- Header -->
+        <div class="flex flex-col items-center text-center mb-16 relative z-10">
+            <h2 class="reveal text-3xl md:text-4xl lg:text-5xl font-oswald font-light tracking-tight text-white mb-6 max-w-4xl leading-tight">
+                Histórias de quem conquistou e <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 to-[#E8C861]">protegeu seu futuro conosco.</span>
+            </h2>
+            <p class="reveal delay-100 text-gray-400 font-light text-base md:text-lg max-w-2xl leading-relaxed">
+                Relacionamentos construídos com confiança, transparência e planejamento inteligente.
+            </p>
+        </div>
+
+        <!-- Cards de Depoimentos -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
+            <!-- Depoimento 1 -->
+            <div class="reveal delay-200 group p-8 sm:p-10 rounded-[2rem] bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] hover:border-gold-500/20 transition-all duration-500 shadow-lg hover:-translate-y-2 relative flex flex-col">
+                <i data-lucide="quote" class="absolute top-8 right-8 w-10 h-10 text-gold-500/10 rotate-180 group-hover:text-gold-500/20 transition-colors duration-500"></i>
+                <div class="flex gap-1 mb-6">
+                    <i data-lucide="star" class="w-4 h-4 fill-gold-400 text-gold-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-gold-400 text-gold-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-gold-400 text-gold-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-gold-400 text-gold-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-gold-400 text-gold-400"></i>
+                </div>
+                <p class="text-gray-300 font-light leading-relaxed mb-8 italic">"Consegui planejar meu primeiro imóvel com muito mais segurança. Atendimento impecável do início ao fim."</p>
+                <div class="flex items-center gap-4 mt-auto">
+                    <div class="w-10 h-10 rounded-full border border-gold-500/30 overflow-hidden shrink-0 shadow-lg flex items-center justify-center bg-black/50">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop" alt="Mariana R." class="w-full h-full object-cover object-center block aspect-square">
+                    </div>
+                    <div>
+                        <h4 class="text-white font-medium text-sm">Mariana R.</h4>
+                        <span class="text-gray-500 text-xs">Cliente Consórcio</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Depoimento 2 -->
+            <div class="reveal delay-300 group p-8 sm:p-10 rounded-[2rem] bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] hover:border-gold-500/20 transition-all duration-500 shadow-lg hover:-translate-y-2 relative flex flex-col">
+                <i data-lucide="quote" class="absolute top-8 right-8 w-10 h-10 text-gold-500/10 rotate-180 group-hover:text-gold-500/20 transition-colors duration-500"></i>
+                <div class="flex gap-1 mb-6">
+                    <i data-lucide="star" class="w-4 h-4 fill-gold-400 text-gold-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-gold-400 text-gold-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-gold-400 text-gold-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-gold-400 text-gold-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-gold-400 text-gold-400"></i>
+                </div>
+                <p class="text-gray-300 font-light leading-relaxed mb-8 italic">"Resolvi meu consórcio e meu seguro no mesmo lugar. Processo simples, transparente e muito profissional."</p>
+                <div class="flex items-center gap-4 mt-auto">
+                    <div class="w-10 h-10 rounded-full border border-gold-500/30 overflow-hidden shrink-0 shadow-lg flex items-center justify-center bg-black/50">
+                        <img src="./img/bruno-lima.jpg" alt="Bruno Lima" class="w-full h-full object-cover object-[50%_75%] block aspect-square">
+                    </div>
+                    <div>
+                        <h4 class="text-white font-medium text-sm">Bruno Lima</h4>
+                        <span class="text-gray-500 text-xs">Cliente Seguro & Consórcio</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Depoimento 3 -->
+            <div class="reveal delay-400 group p-8 sm:p-10 rounded-[2rem] bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] hover:border-gold-500/20 transition-all duration-500 shadow-lg hover:-translate-y-2 relative flex flex-col">
+                <i data-lucide="quote" class="absolute top-8 right-8 w-10 h-10 text-gold-500/10 rotate-180 group-hover:text-gold-500/20 transition-colors duration-500"></i>
+                <div class="flex gap-1 mb-6">
+                    <i data-lucide="star" class="w-4 h-4 fill-gold-400 text-gold-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-gold-400 text-gold-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-gold-400 text-gold-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-gold-400 text-gold-400"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-gold-400 text-gold-400"></i>
+                </div>
+                <p class="text-gray-300 font-light leading-relaxed mb-8 italic">"Passa muita confiança. Explicaram tudo com clareza e me ajudaram a escolher a melhor solução."</p>
+                <div class="flex items-center gap-4 mt-auto">
+                    <div class="w-10 h-10 rounded-full border border-gold-500/30 overflow-hidden shrink-0 shadow-lg flex items-center justify-center bg-black/50">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&auto=format&fit=crop" alt="Fernanda S." class="w-full h-full object-cover object-center block aspect-square">
+                    </div>
+                    <div>
+                        <h4 class="text-white font-medium text-sm">Fernanda S.</h4>
+                        <span class="text-gray-500 text-xs">Cliente Seguros</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: CTA Final de Conversão -->
+    <section class="relative z-10 w-full px-4 md:px-8 py-10">
+        <div class="max-w-[1300px] mx-auto rounded-[3rem] overflow-hidden relative border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] bg-[#0a0a0a]">
+            <!-- Background Layer & Glow Effect -->
+            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gold-600/10 via-[#0a0a0a] to-[#050505] z-0 pointer-events-none"></div>
+            
+            <div class="relative z-10 px-6 py-24 md:py-32 flex flex-col items-center text-center">
+                <div class="reveal w-16 h-16 rounded-full bg-white/5 flex items-center justify-center border border-white/10 mb-8 backdrop-blur-md">
+                    <i data-lucide="trending-up" class="w-8 h-8 text-gold-400"></i>
+                </div>
+                
+                <h2 class="reveal delay-100 text-4xl md:text-5xl lg:text-6xl font-oswald font-light tracking-tight text-white mb-8 max-w-4xl leading-[1.1]">
+                    Seu próximo patrimônio começa com uma <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 to-[#E8C861]">decisão inteligente.</span>
+                </h2>
+                
+                <p class="reveal delay-200 text-gray-400 font-light text-lg md:text-xl max-w-2xl leading-relaxed mb-12">
+                    Fale agora com nossa equipe e descubra as melhores soluções em consórcios e seguros para o seu momento.
+                </p>
+                
+                <div class="reveal delay-300 flex flex-col sm:flex-row gap-5 w-full sm:w-auto">
+                    <!-- CTA Primário (WhatsApp) -->
+                    <a href="https://wa.me/5511917847600?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20uma%20simula%C3%A7%C3%A3o." target="_blank" class="btn-gold group flex items-center justify-center gap-3 rounded-full h-[60px] px-10 shadow-[0_0_30px_-5px_rgba(212,175,55,0.4)] hover:shadow-[0_0_50px_-5px_rgba(212,175,55,0.6)] transition-all hover:scale-[1.02]">
+                        <i data-lucide="message-circle" class="w-5 h-5 text-black"></i>
+                        <span class="uppercase text-sm font-bold tracking-widest text-black">
+                            Falar no WhatsApp
+                        </span>
+                    </a>
+
+                    <!-- CTA Secundário -->
+                    <a href="https://wa.me/5511917847600?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20uma%20simula%C3%A7%C3%A3o." target="_blank" class="group flex items-center justify-center gap-3 rounded-full h-[60px] px-10 bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/30 backdrop-blur-sm transition-all">
+                        <span class="uppercase text-sm font-bold tracking-widest text-white">
+                            Solicitar Simulação
+                        </span>
+                        <i data-lucide="arrow-right" class="w-5 h-5 text-white group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contato" class="relative z-10 w-full border-t border-white/5 bg-[#030303] pt-20 pb-10">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16">
+                
+                <!-- Coluna 1: Marca -->
+                <div class="flex flex-col items-start gap-6">
+                    <a href="#" class="flex items-center gap-3 group">
+                        <div class="w-10 h-10 rounded-full border border-gold-500/30 flex items-center justify-center bg-black/50 group-hover:border-gold-400 transition-colors">
+                            <span class="font-oswald text-2xl text-gold-400">Z</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="text-xl font-oswald font-medium tracking-widest text-white leading-none">ZAPELLI</span>
+                            <span class="text-[10px] font-sans tracking-[0.2em] text-gray-400 uppercase leading-none mt-1">Seguros & Consórcios</span>
+                        </div>
+                    </a>
+                    <p class="text-sm text-gray-500 font-light leading-relaxed max-w-xs">
+                        Especialistas em proteção patrimonial e planejamento financeiro inteligente.
+                    </p>
+                </div>
+
+                <!-- Coluna 2: Navegação -->
+                <div class="flex flex-col gap-5">
+                    <h5 class="text-white font-oswald tracking-widest uppercase text-sm mb-2">Menu Rápido</h5>
+                    <a href="#" class="text-gray-400 hover:text-gold-400 text-sm font-light transition-colors w-fit">Início</a>
+                    <a href="#solucoes" class="text-gray-400 hover:text-gold-400 text-sm font-light transition-colors w-fit">Consórcios</a>
+                    <a href="#solucoes" class="text-gray-400 hover:text-gold-400 text-sm font-light transition-colors w-fit">Seguros</a>
+                    <a href="#diferenciais" class="text-gray-400 hover:text-gold-400 text-sm font-light transition-colors w-fit">Sobre Nós</a>
+                    <a href="#depoimentos" class="text-gray-400 hover:text-gold-400 text-sm font-light transition-colors w-fit">Depoimentos</a>
+                    <a href="#contato" class="text-gray-400 hover:text-gold-400 text-sm font-light transition-colors w-fit">Contato</a>
+                </div>
+
+                <!-- Coluna 3: Institucional -->
+                <div class="flex flex-col gap-5">
+                    <h5 class="text-white font-oswald tracking-widest uppercase text-sm mb-2">Parceiros Autorizados</h5>
+                    <div class="flex items-center gap-3">
+                        <div class="w-6 h-6 rounded-full bg-white/5 flex items-center justify-center border border-white/10 shrink-0">
+                            <i data-lucide="check" class="w-3 h-3 text-gold-400"></i>
+                        </div>
+                        <span class="text-gray-400 text-sm font-light">Itaú Consórcios</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-6 h-6 rounded-full bg-white/5 flex items-center justify-center border border-white/10 shrink-0">
+                            <i data-lucide="check" class="w-3 h-3 text-gold-400"></i>
+                        </div>
+                        <span class="text-gray-400 text-sm font-light">Porto Seguro</span>
+                    </div>
+                </div>
+
+                <!-- Coluna 4: Contato -->
+                <div id="contato-info" class="flex flex-col gap-5 scroll-mt-32">
+                    <h5 class="text-white font-oswald tracking-widest uppercase text-sm mb-2">Contato</h5>
+                    <a href="https://wa.me/5511917847600?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20uma%20simula%C3%A7%C3%A3o." target="_blank" class="flex items-center gap-3 text-gray-400 hover:text-gold-400 transition-colors group">
+                        <i data-lucide="message-circle" class="w-4 h-4 group-hover:scale-110 transition-transform"></i>
+                        <span class="text-sm font-light">(11) 91784-7600</span>
+                    </a>
+                    <a href="#" class="flex items-center gap-3 text-gray-400 hover:text-gold-400 transition-colors group">
+                        <i data-lucide="mail" class="w-4 h-4 group-hover:scale-110 transition-transform"></i>
+                        <span class="text-sm font-light">contato@zapelli.com.br</span>
+                    </a>
+                    <a href="#" class="flex items-center gap-3 text-gray-400 hover:text-gold-400 transition-colors group">
+                        <i data-lucide="instagram" class="w-4 h-4 group-hover:scale-110 transition-transform"></i>
+                        <span class="text-sm font-light">@zapelli_seguros</span>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-xs text-gray-600 font-light">
+                    &copy; 2026 Zapelli Corretora de Seguros & Consórcios. Todos os direitos reservados.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#" class="text-xs text-gray-600 hover:text-gray-400 transition-colors">Termos de Uso</a>
+                    <a href="#" class="text-xs text-gray-600 hover:text-gray-400 transition-colors">Política de Privacidade</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 z-50 w-12 h-12 rounded-full bg-gradient-to-b from-[#E8C861] to-[#D4AF37] hover:from-[#F0D578] hover:to-[#E8C861] text-black flex items-center justify-center shadow-[0_4px_20px_rgba(212,175,55,0.4)] transition-all duration-500 translate-y-16 opacity-0 pointer-events-none group">
+        <i data-lucide="arrow-up" class="w-5 h-5 group-hover:-translate-y-1 transition-transform"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/scripts.js" defer></script>
+</body>
+</html>
