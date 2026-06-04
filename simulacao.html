@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulação - Zapelli Seguros & Consórcios</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Oswald:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Custom CSS & Tailwind Config (from index) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        oswald: ['Oswald', 'sans-serif'],
+                    },
+                    colors: {
+                        gold: {
+                            300: '#F0D578',
+                            400: '#E8C861',
+                            500: '#D4AF37',
+                            600: '#AA8822',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #030303;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+        .btn-gold {
+            background: linear-gradient(135deg, #E8C861 0%, #D4AF37 100%);
+            color: #000;
+        }
+        .btn-gold:hover {
+            background: linear-gradient(135deg, #F0D578 0%, #E8C861 100%);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-[#030303]">
+    <!-- Background Effects -->
+    <div class="absolute inset-0 z-0">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-gold-500/10 blur-[120px] rounded-full pointer-events-none"></div>
+    </div>
+
+    <!-- Header Logo (Back to Home) -->
+    <a href="index.html" class="absolute top-8 left-8 flex items-center gap-3 group z-20">
+        <div class="w-10 h-10 rounded-full border border-gold-500/30 flex items-center justify-center bg-black/50 group-hover:border-gold-400 transition-colors">
+            <span class="font-oswald text-2xl text-gold-400">Z</span>
+        </div>
+        <div class="flex flex-col">
+            <span class="text-xl font-oswald font-medium tracking-widest text-white leading-none">ZAPELLI</span>
+            <span class="text-[10px] font-sans tracking-[0.2em] text-gray-400 uppercase leading-none mt-1">Seguros & Consórcios</span>
+        </div>
+    </a>
+
+    <!-- Form Container -->
+    <main class="relative z-10 w-full max-w-md px-6 mt-16 md:mt-0">
+        <div class="glass-panel p-8 md:p-10 rounded-3xl relative overflow-hidden">
+            <!-- Glow inner effect -->
+            <div class="absolute -top-20 -right-20 w-40 h-40 bg-gold-500/20 blur-[50px] rounded-full"></div>
+            
+            <div class="text-center mb-8">
+                <h1 class="text-3xl font-oswald font-light text-white mb-2">Sua <span class="text-gold-400">Simulação</span></h1>
+                <p class="text-sm text-gray-400 font-light">Preencha os dados abaixo para começarmos. (Etapa 1 de 2)</p>
+            </div>
+
+            <!-- Formulário Etapa 1 -->
+            <form id="step1-form" class="flex flex-col gap-5">
+                <div class="flex flex-col gap-1.5">
+                    <label for="nome" class="text-xs uppercase tracking-wider text-gray-400 font-medium ml-1">Nome Completo</label>
+                    <input type="text" id="nome" required placeholder="Ex: João da Silva" 
+                           class="w-full h-12 bg-white/5 border border-white/10 rounded-xl px-4 text-white placeholder-gray-600 focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-all">
+                </div>
+
+                <div class="flex flex-col gap-1.5">
+                    <label for="email" class="text-xs uppercase tracking-wider text-gray-400 font-medium ml-1">E-mail</label>
+                    <input type="email" id="email" required placeholder="seuemail@exemplo.com" 
+                           class="w-full h-12 bg-white/5 border border-white/10 rounded-xl px-4 text-white placeholder-gray-600 focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-all">
+                </div>
+
+                <div class="flex flex-col gap-1.5">
+                    <label for="telefone" class="text-xs uppercase tracking-wider text-gray-400 font-medium ml-1">Telefone / WhatsApp</label>
+                    <input type="tel" id="telefone" required placeholder="(00) 00000-0000" 
+                           class="w-full h-12 bg-white/5 border border-white/10 rounded-xl px-4 text-white placeholder-gray-600 focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-all">
+                </div>
+
+                <button type="button" onclick="nextStep()" class="btn-gold w-full h-14 rounded-xl mt-4 font-bold uppercase tracking-widest text-sm flex items-center justify-center gap-2 transition-all hover:scale-[1.02] shadow-[0_0_20px_-5px_rgba(212,175,55,0.4)]">
+                    Próxima Etapa
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </button>
+            </form>
+
+            <!-- Formulário Etapa 2 -->
+            <div id="step2-container" class="hidden flex-col gap-5 text-center transition-all">
+                <div class="grid grid-cols-2 gap-4" id="main-options">
+                    <button onclick="finalizarSimulacao('Consórcio')" class="group flex flex-col items-center justify-center gap-3 p-6 bg-white/5 border border-white/10 rounded-2xl hover:border-gold-400 hover:bg-gold-500/10 transition-all h-32">
+                        <i data-lucide="home" class="w-8 h-8 text-gold-400 group-hover:scale-110 transition-transform"></i>
+                        <span class="text-sm font-medium tracking-wide text-white">Consórcios</span>
+                    </button>
+                    <button onclick="showSegurosOptions()" class="group flex flex-col items-center justify-center gap-3 p-6 bg-white/5 border border-white/10 rounded-2xl hover:border-gold-400 hover:bg-gold-500/10 transition-all h-32">
+                        <i data-lucide="shield-check" class="w-8 h-8 text-gold-400 group-hover:scale-110 transition-transform"></i>
+                        <span class="text-sm font-medium tracking-wide text-white">Seguros</span>
+                    </button>
+                </div>
+
+                <!-- Sub-opções de Seguros -->
+                <div id="seguros-options" class="hidden flex-col gap-3 mt-2 animate-[fadeIn_0.5s_ease-out]">
+                    <p class="text-xs text-gray-400 uppercase tracking-widest font-medium mb-2 text-left ml-1">Qual tipo de seguro você busca?</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left">
+                        <button onclick="finalizarSimulacao('Seguro Auto')" class="p-4 bg-white/5 border border-white/10 rounded-xl hover:border-gold-400 hover:text-gold-400 transition-colors text-sm text-white hover:bg-gold-500/5">Seguro Auto</button>
+                        <button onclick="finalizarSimulacao('Seguro Residencial')" class="p-4 bg-white/5 border border-white/10 rounded-xl hover:border-gold-400 hover:text-gold-400 transition-colors text-sm text-white hover:bg-gold-500/5">Seguro Residencial</button>
+                        <button onclick="finalizarSimulacao('Seguro Vida')" class="p-4 bg-white/5 border border-white/10 rounded-xl hover:border-gold-400 hover:text-gold-400 transition-colors text-sm text-white hover:bg-gold-500/5">Seguro Vida</button>
+                        <button onclick="finalizarSimulacao('Seguro Empresarial')" class="p-4 bg-white/5 border border-white/10 rounded-xl hover:border-gold-400 hover:text-gold-400 transition-colors text-sm text-white hover:bg-gold-500/5">Seguro Empresarial</button>
+                        <button onclick="finalizarSimulacao('Outros Seguros')" class="p-4 bg-white/5 border border-white/10 rounded-xl hover:border-gold-400 hover:text-gold-400 transition-colors text-sm text-white hover:bg-gold-500/5 sm:col-span-2 text-center">Outros / Não sei ainda</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Initialize icons
+        lucide.createIcons();
+
+        // Variável para evitar múltiplos envios parciais do mesmo lead
+        let leadCapturado = false;
+
+        // Função de captura silenciosa (Salva o lead se ele não terminar)
+        const capturaSilenciosa = async () => {
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const telefone = document.getElementById('telefone').value;
+
+            // Só tenta capturar se não foi capturado ainda e se tem algum meio de contato
+            if (!leadCapturado && nome && (email || telefone.length > 13)) {
+                leadCapturado = true;
+                console.log("🔔 [SISTEMA] Lead capturado silenciosamente:", { nome, email, telefone });
+                
+                // Envia a requisição para o nosso arquivo PHP local (Hostnet)
+                try {
+                    fetch('captura.php', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ 
+                            tipo: "Captura Parcial (Etapa 1)", 
+                            nome: nome, 
+                            email: email, 
+                            telefone: telefone,
+                            interesse: "Ainda não selecionou na Etapa 2"
+                        })
+                    });
+                } catch (e) {}
+            }
+        };
+
+        // Eventos para capturar quando o cliente terminar de digitar e sair do campo
+        document.getElementById('email').addEventListener('blur', capturaSilenciosa);
+        document.getElementById('telefone').addEventListener('blur', capturaSilenciosa);
+
+        // Avançar para a Etapa 2
+        function nextStep() {
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const telefone = document.getElementById('telefone').value;
+
+            if(!nome || !email || !telefone) {
+                alert("Por favor, preencha todos os campos para continuar.");
+                return;
+            }
+
+            // Se ele clica em próximo, também garantimos a captura parcial
+            capturaSilenciosa();
+
+            // Esconder Etapa 1 e mostrar Etapa 2
+            document.getElementById('step1-form').classList.add('hidden');
+            document.getElementById('step1-form').classList.remove('flex');
+            
+            document.getElementById('step2-container').classList.remove('hidden');
+            document.getElementById('step2-container').classList.add('flex');
+            
+            // Alterar textos do cabeçalho
+            document.querySelector('.text-center p').innerText = "Excelente! Agora nos diga o que você precisa. (Etapa 2 de 2)";
+        }
+
+        // Mostrar opções de Seguros
+        function showSegurosOptions() {
+            document.getElementById('main-options').classList.add('hidden');
+            document.getElementById('seguros-options').classList.remove('hidden');
+            document.getElementById('seguros-options').classList.add('flex');
+        }
+
+        // Finalizar a Simulação (Disparado pelos botões de Consórcio ou Sub-Seguros)
+        async function finalizarSimulacao(interesseEscolhido) {
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const telefone = document.getElementById('telefone').value;
+
+            // Muda o texto do botão temporariamente para dar feedback visual
+            event.currentTarget.innerHTML = '<span class="text-gold-400">Processando...</span>';
+
+            try {
+                // Envio Final
+                await fetch('captura.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ 
+                        tipo: "Simulação Concluída!", 
+                        nome: nome, 
+                        email: email, 
+                        telefone: telefone,
+                        interesse: interesseEscolhido
+                    })
+                });
+            } catch (e) {
+                console.error("Erro no envio:", e);
+            }
+
+            // Redirecionar para página de obrigado
+            window.location.href = "obrigado.html";
+        }
+
+        // Máscara simples para telefone
+        const telefoneInput = document.getElementById('telefone');
+        telefoneInput.addEventListener('input', function (e) {
+            let x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,5})(\d{0,4})/);
+            e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+        });
+    </script>
+</body>
+</html>
