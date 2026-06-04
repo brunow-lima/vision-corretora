@@ -16,7 +16,7 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     
-    <!-- Custom CSS & Tailwind Config (from index) -->
+    <!-- Custom CSS & Tailwind Config -->
     <script>
         tailwind.config = {
             theme: {
@@ -37,27 +37,7 @@
             }
         }
     </script>
-    <style>
-        body {
-            background-color: #030303;
-            color: #ffffff;
-            font-family: 'Inter', sans-serif;
-        }
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-        }
-        .btn-gold {
-            background: linear-gradient(135deg, #E8C861 0%, #D4AF37 100%);
-            color: #000;
-        }
-        .btn-gold:hover {
-            background: linear-gradient(135deg, #F0D578 0%, #E8C861 100%);
-        }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-[#030303]">
     <!-- Background Effects -->
@@ -106,6 +86,9 @@
                     <input type="tel" id="telefone" required placeholder="(00) 00000-0000" 
                            class="w-full h-12 bg-white/5 border border-white/10 rounded-xl px-4 text-white placeholder-gray-600 focus:outline-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 transition-all">
                 </div>
+
+                <!-- Div para exibição de erros profissionais -->
+                <div id="form-error" class="hidden bg-red-500/10 border border-red-500/30 text-red-400 text-sm p-3 rounded-lg text-center font-medium animate-[fadeIn_0.3s_ease-out]"></div>
 
                 <button type="button" onclick="nextStep()" class="btn-gold w-full h-14 rounded-xl mt-4 font-bold uppercase tracking-widest text-sm flex items-center justify-center gap-2 transition-all hover:scale-[1.02] shadow-[0_0_20px_-5px_rgba(212,175,55,0.4)]">
                     Próxima Etapa
@@ -180,14 +163,48 @@
         document.getElementById('email').addEventListener('blur', capturaSilenciosa);
         document.getElementById('telefone').addEventListener('blur', capturaSilenciosa);
 
-        // Avançar para a Etapa 2
+        // Funções para gerenciar erros na tela
+        function showError(msg) {
+            const errDiv = document.getElementById('form-error');
+            errDiv.innerText = msg;
+            errDiv.classList.remove('hidden');
+        }
+
+        function clearError() {
+            document.getElementById('form-error').classList.add('hidden');
+        }
+
+        // Avançar para a Etapa 2 com Validação Profissional
         function nextStep() {
-            const nome = document.getElementById('nome').value;
-            const email = document.getElementById('email').value;
-            const telefone = document.getElementById('telefone').value;
+            clearError();
+            
+            const nome = document.getElementById('nome').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const telefone = document.getElementById('telefone').value.trim();
 
             if(!nome || !email || !telefone) {
-                alert("Por favor, preencha todos os campos para continuar.");
+                showError("Por favor, preencha todos os campos para continuar.");
+                return;
+            }
+
+            // Validação de Nome (deve ter pelo menos Nome e Sobrenome e apenas letras)
+            const nameRegex = /^[A-Za-zÀ-ÿ]+(?: [A-Za-zÀ-ÿ]+)+$/;
+            if(!nameRegex.test(nome)) {
+                showError("Por favor, informe seu nome completo válido (nome e sobrenome).");
+                return;
+            }
+
+            // Validação de E-mail
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if(!emailRegex.test(email)) {
+                showError("Por favor, informe um endereço de e-mail válido.");
+                return;
+            }
+
+            // Validação de Telefone (deve ter 10 ou 11 dígitos)
+            const numDigits = telefone.replace(/\D/g, '').length;
+            if(numDigits < 10 || numDigits > 11) {
+                showError("Por favor, informe um telefone ou WhatsApp válido com DDD.");
                 return;
             }
 
