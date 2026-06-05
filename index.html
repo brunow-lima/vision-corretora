@@ -305,64 +305,106 @@
                     
                     <div class="overflow-hidden relative w-full flex flex-col gap-3" style="-webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);">
                         
-                        <!-- Row 1 -->
-                        <div class="animate-scroll flex gap-8 py-2">
+                        <!-- Single Continuous Row -->
+                        <div class="animate-scroll flex gap-8 py-4">
+                            <!-- We will create 4 identical groups to guarantee it fills any wide screen before looping at 50% -->
                             <!-- Group 1 -->
                             <div class="flex gap-8 shrink-0 items-center">
-                                <div class="h-8 sm:h-10 w-24 sm:w-32 flex items-center justify-center shrink-0">
-                                    <img src="./img/porto1.png" alt="Porto Seguro" class="max-h-full max-w-full object-contain brightness-0 invert opacity-50 hover:opacity-100 transition-opacity duration-300">
+                                <div class="h-10 sm:h-12 w-24 sm:w-32 flex items-center justify-center shrink-0">
+                                    <img src="./img/porto1.png" alt="Porto Seguro" class="max-h-full max-w-full object-contain grayscale brightness-0 invert opacity-50 hover:grayscale-0 hover:brightness-100 hover:invert-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
                                 </div>
-                                <div class="h-8 sm:h-10 w-24 sm:w-32 flex items-center justify-center shrink-0">
-                                    <img src="./img/itau1.png" alt="Itaú" class="max-h-full max-w-full object-contain brightness-0 invert opacity-50 hover:opacity-100 transition-opacity duration-300">
+                                <div class="h-10 sm:h-12 w-24 sm:w-32 flex items-center justify-center shrink-0">
+                                    <img src="./img/itau1.png" alt="Itaú" class="max-h-full max-w-full object-contain grayscale brightness-0 invert opacity-50 hover:grayscale-0 hover:brightness-100 hover:invert-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
                                 </div>
-                                <div class="h-8 sm:h-10 w-24 sm:w-32 flex items-center justify-center shrink-0">
-                                    <img src="./img/bradesco1.png" alt="Bradesco" class="max-h-full max-w-full object-contain brightness-0 invert opacity-50 hover:opacity-100 transition-opacity duration-300">
+                                <div class="h-10 sm:h-12 w-24 sm:w-32 flex items-center justify-center shrink-0">
+                                    <img src="./img/bradesco1.png" alt="Bradesco" class="max-h-full max-w-full object-contain grayscale brightness-0 invert opacity-50 hover:grayscale-0 hover:brightness-100 hover:invert-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
                                 </div>
-                                <div class="h-8 sm:h-10 w-24 sm:w-32 flex items-center justify-center shrink-0">
-                                    <img src="./img/azul1.png" alt="Azul Seguros" class="max-h-full max-w-full object-contain brightness-0 invert opacity-50 hover:opacity-100 transition-opacity duration-300">
+                                <div class="h-10 sm:h-12 w-24 sm:w-32 flex items-center justify-center shrink-0">
+                                    <img src="./img/azul1.png" alt="Azul Seguros" class="max-h-full max-w-full object-contain grayscale brightness-0 invert opacity-50 hover:grayscale-0 hover:brightness-100 hover:invert-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
                                 </div>
-                            </div>
-                            <!-- Group 1 (Duplicate for infinite scroll) -->
-                            <div class="flex gap-8 shrink-0 items-center" aria-hidden="true">
-                                <div class="h-8 sm:h-10 w-24 sm:w-32 flex items-center justify-center shrink-0">
-                                    <img src="./img/porto1.png" alt="Porto Seguro" class="max-h-full max-w-full object-contain brightness-0 invert opacity-50 hover:opacity-100 transition-opacity duration-300">
+                                <div class="h-10 sm:h-12 w-24 sm:w-32 flex items-center justify-center shrink-0">
+                                    <img src="./img/suhai1.png" alt="Suhai Seguros" class="max-h-full max-w-full object-contain scale-125 sm:scale-150 grayscale brightness-0 invert opacity-50 hover:grayscale-0 hover:brightness-100 hover:invert-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
                                 </div>
-                                <div class="h-8 sm:h-10 w-24 sm:w-32 flex items-center justify-center shrink-0">
-                                    <img src="./img/itau1.png" alt="Itaú" class="max-h-full max-w-full object-contain brightness-0 invert opacity-50 hover:opacity-100 transition-opacity duration-300">
+                                <div class="h-10 sm:h-12 w-24 sm:w-32 flex items-center justify-center shrink-0">
+                                    <img src="./img/sulamerica1.png" alt="SulAmérica" class="max-h-full max-w-full object-contain scale-125 sm:scale-150 grayscale brightness-0 invert opacity-50 hover:grayscale-0 hover:brightness-100 hover:invert-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
                                 </div>
-                                <div class="h-8 sm:h-10 w-24 sm:w-32 flex items-center justify-center shrink-0">
-                                    <img src="./img/bradesco1.png" alt="Bradesco" class="max-h-full max-w-full object-contain brightness-0 invert opacity-50 hover:opacity-100 transition-opacity duration-300">
-                                </div>
-                                <div class="h-8 sm:h-10 w-24 sm:w-32 flex items-center justify-center shrink-0">
-                                    <img src="./img/azul1.png" alt="Azul Seguros" class="max-h-full max-w-full object-contain brightness-0 invert opacity-50 hover:opacity-100 transition-opacity duration-300">
+                                <div class="h-10 sm:h-12 w-24 sm:w-32 flex items-center justify-center shrink-0">
+                                    <img src="./img/tokio1.png" alt="Tokio Marine" class="max-h-full max-w-full object-contain scale-125 sm:scale-150 grayscale brightness-0 invert opacity-50 hover:grayscale-0 hover:brightness-100 hover:invert-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
                                 </div>
                             </div>
-                        </div>
-
-                        <!-- Row 2 -->
-                        <div class="animate-scroll flex gap-8 py-2" style="animation-direction: reverse;">
+                            
                             <!-- Group 2 -->
-                            <div class="flex gap-8 shrink-0 items-center">
-                                <div class="h-8 sm:h-10 w-24 sm:w-32 flex items-center justify-center shrink-0">
-                                    <img src="./img/suhai1.png" alt="Suhai Seguros" class="max-h-full max-w-full object-contain brightness-0 invert opacity-50 hover:opacity-100 transition-opacity duration-300">
+                            <div class="flex gap-8 shrink-0 items-center" aria-hidden="true">
+                                <div class="h-10 sm:h-12 w-24 sm:w-32 flex items-center justify-center shrink-0">
+                                    <img src="./img/porto1.png" alt="Porto Seguro" class="max-h-full max-w-full object-contain grayscale brightness-0 invert opacity-50 hover:grayscale-0 hover:brightness-100 hover:invert-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
                                 </div>
-                                <div class="h-8 sm:h-10 w-24 sm:w-32 flex items-center justify-center shrink-0">
-                                    <img src="./img/sulamerica1.png" alt="SulAmérica" class="max-h-full max-w-full object-contain brightness-0 invert opacity-50 hover:opacity-100 transition-opacity duration-300">
+                                <div class="h-10 sm:h-12 w-24 sm:w-32 flex items-center justify-center shrink-0">
+                                    <img src="./img/itau1.png" alt="Itaú" class="max-h-full max-w-full object-contain grayscale brightness-0 invert opacity-50 hover:grayscale-0 hover:brightness-100 hover:invert-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
                                 </div>
-                                <div class="h-8 sm:h-10 w-24 sm:w-32 flex items-center justify-center shrink-0">
-                                    <img src="./img/tokio1.png" alt="Tokio Marine" class="max-h-full max-w-full object-contain brightness-0 invert opacity-50 hover:opacity-100 transition-opacity duration-300">
+                                <div class="h-10 sm:h-12 w-24 sm:w-32 flex items-center justify-center shrink-0">
+                                    <img src="./img/bradesco1.png" alt="Bradesco" class="max-h-full max-w-full object-contain grayscale brightness-0 invert opacity-50 hover:grayscale-0 hover:brightness-100 hover:invert-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
+                                </div>
+                                <div class="h-10 sm:h-12 w-24 sm:w-32 flex items-center justify-center shrink-0">
+                                    <img src="./img/azul1.png" alt="Azul Seguros" class="max-h-full max-w-full object-contain grayscale brightness-0 invert opacity-50 hover:grayscale-0 hover:brightness-100 hover:invert-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
+                                </div>
+                                <div class="h-10 sm:h-12 w-24 sm:w-32 flex items-center justify-center shrink-0">
+                                    <img src="./img/suhai1.png" alt="Suhai Seguros" class="max-h-full max-w-full object-contain scale-125 sm:scale-150 grayscale brightness-0 invert opacity-50 hover:grayscale-0 hover:brightness-100 hover:invert-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
+                                </div>
+                                <div class="h-10 sm:h-12 w-24 sm:w-32 flex items-center justify-center shrink-0">
+                                    <img src="./img/sulamerica1.png" alt="SulAmérica" class="max-h-full max-w-full object-contain scale-125 sm:scale-150 grayscale brightness-0 invert opacity-50 hover:grayscale-0 hover:brightness-100 hover:invert-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
+                                </div>
+                                <div class="h-10 sm:h-12 w-24 sm:w-32 flex items-center justify-center shrink-0">
+                                    <img src="./img/tokio1.png" alt="Tokio Marine" class="max-h-full max-w-full object-contain scale-125 sm:scale-150 grayscale brightness-0 invert opacity-50 hover:grayscale-0 hover:brightness-100 hover:invert-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
                                 </div>
                             </div>
-                            <!-- Group 2 (Duplicate for infinite scroll) -->
+
+                            <!-- Group 3 -->
                             <div class="flex gap-8 shrink-0 items-center" aria-hidden="true">
-                                <div class="h-8 sm:h-10 w-24 sm:w-32 flex items-center justify-center shrink-0">
-                                    <img src="./img/suhai1.png" alt="Suhai Seguros" class="max-h-full max-w-full object-contain brightness-0 invert opacity-50 hover:opacity-100 transition-opacity duration-300">
+                                <div class="h-10 sm:h-12 w-24 sm:w-32 flex items-center justify-center shrink-0">
+                                    <img src="./img/porto1.png" alt="Porto Seguro" class="max-h-full max-w-full object-contain grayscale brightness-0 invert opacity-50 hover:grayscale-0 hover:brightness-100 hover:invert-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
                                 </div>
-                                <div class="h-8 sm:h-10 w-24 sm:w-32 flex items-center justify-center shrink-0">
-                                    <img src="./img/sulamerica1.png" alt="SulAmérica" class="max-h-full max-w-full object-contain brightness-0 invert opacity-50 hover:opacity-100 transition-opacity duration-300">
+                                <div class="h-10 sm:h-12 w-24 sm:w-32 flex items-center justify-center shrink-0">
+                                    <img src="./img/itau1.png" alt="Itaú" class="max-h-full max-w-full object-contain grayscale brightness-0 invert opacity-50 hover:grayscale-0 hover:brightness-100 hover:invert-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
                                 </div>
-                                <div class="h-8 sm:h-10 w-24 sm:w-32 flex items-center justify-center shrink-0">
-                                    <img src="./img/tokio1.png" alt="Tokio Marine" class="max-h-full max-w-full object-contain brightness-0 invert opacity-50 hover:opacity-100 transition-opacity duration-300">
+                                <div class="h-10 sm:h-12 w-24 sm:w-32 flex items-center justify-center shrink-0">
+                                    <img src="./img/bradesco1.png" alt="Bradesco" class="max-h-full max-w-full object-contain grayscale brightness-0 invert opacity-50 hover:grayscale-0 hover:brightness-100 hover:invert-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
+                                </div>
+                                <div class="h-10 sm:h-12 w-24 sm:w-32 flex items-center justify-center shrink-0">
+                                    <img src="./img/azul1.png" alt="Azul Seguros" class="max-h-full max-w-full object-contain grayscale brightness-0 invert opacity-50 hover:grayscale-0 hover:brightness-100 hover:invert-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
+                                </div>
+                                <div class="h-10 sm:h-12 w-24 sm:w-32 flex items-center justify-center shrink-0">
+                                    <img src="./img/suhai1.png" alt="Suhai Seguros" class="max-h-full max-w-full object-contain scale-125 sm:scale-150 grayscale brightness-0 invert opacity-50 hover:grayscale-0 hover:brightness-100 hover:invert-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
+                                </div>
+                                <div class="h-10 sm:h-12 w-24 sm:w-32 flex items-center justify-center shrink-0">
+                                    <img src="./img/sulamerica1.png" alt="SulAmérica" class="max-h-full max-w-full object-contain scale-125 sm:scale-150 grayscale brightness-0 invert opacity-50 hover:grayscale-0 hover:brightness-100 hover:invert-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
+                                </div>
+                                <div class="h-10 sm:h-12 w-24 sm:w-32 flex items-center justify-center shrink-0">
+                                    <img src="./img/tokio1.png" alt="Tokio Marine" class="max-h-full max-w-full object-contain scale-125 sm:scale-150 grayscale brightness-0 invert opacity-50 hover:grayscale-0 hover:brightness-100 hover:invert-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
+                                </div>
+                            </div>
+
+                            <!-- Group 4 -->
+                            <div class="flex gap-8 shrink-0 items-center" aria-hidden="true">
+                                <div class="h-10 sm:h-12 w-24 sm:w-32 flex items-center justify-center shrink-0">
+                                    <img src="./img/porto1.png" alt="Porto Seguro" class="max-h-full max-w-full object-contain grayscale brightness-0 invert opacity-50 hover:grayscale-0 hover:brightness-100 hover:invert-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
+                                </div>
+                                <div class="h-10 sm:h-12 w-24 sm:w-32 flex items-center justify-center shrink-0">
+                                    <img src="./img/itau1.png" alt="Itaú" class="max-h-full max-w-full object-contain grayscale brightness-0 invert opacity-50 hover:grayscale-0 hover:brightness-100 hover:invert-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
+                                </div>
+                                <div class="h-10 sm:h-12 w-24 sm:w-32 flex items-center justify-center shrink-0">
+                                    <img src="./img/bradesco1.png" alt="Bradesco" class="max-h-full max-w-full object-contain grayscale brightness-0 invert opacity-50 hover:grayscale-0 hover:brightness-100 hover:invert-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
+                                </div>
+                                <div class="h-10 sm:h-12 w-24 sm:w-32 flex items-center justify-center shrink-0">
+                                    <img src="./img/azul1.png" alt="Azul Seguros" class="max-h-full max-w-full object-contain grayscale brightness-0 invert opacity-50 hover:grayscale-0 hover:brightness-100 hover:invert-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
+                                </div>
+                                <div class="h-10 sm:h-12 w-24 sm:w-32 flex items-center justify-center shrink-0">
+                                    <img src="./img/suhai1.png" alt="Suhai Seguros" class="max-h-full max-w-full object-contain scale-125 sm:scale-150 grayscale brightness-0 invert opacity-50 hover:grayscale-0 hover:brightness-100 hover:invert-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
+                                </div>
+                                <div class="h-10 sm:h-12 w-24 sm:w-32 flex items-center justify-center shrink-0">
+                                    <img src="./img/sulamerica1.png" alt="SulAmérica" class="max-h-full max-w-full object-contain scale-125 sm:scale-150 grayscale brightness-0 invert opacity-50 hover:grayscale-0 hover:brightness-100 hover:invert-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
+                                </div>
+                                <div class="h-10 sm:h-12 w-24 sm:w-32 flex items-center justify-center shrink-0">
+                                    <img src="./img/tokio1.png" alt="Tokio Marine" class="max-h-full max-w-full object-contain scale-125 sm:scale-150 grayscale brightness-0 invert opacity-50 hover:grayscale-0 hover:brightness-100 hover:invert-0 hover:opacity-100 transition-all duration-500 cursor-pointer">
                                 </div>
                             </div>
                         </div>
