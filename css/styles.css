@@ -69,13 +69,16 @@ body { -ms-overflow-style: none; scrollbar-width: none; background-color: #05050
 
 /* Infinite Carousel */
 @keyframes scroll-x {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-50%, 0, 0); }
 }
 .animate-scroll {
     animation: scroll-x 15s linear infinite;
     display: flex;
     width: max-content;
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 .animate-scroll:hover {
     animation-play-state: paused;
