@@ -306,125 +306,63 @@
                     <div class="overflow-hidden relative w-full flex flex-col gap-3" style="-webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);">
                         
                         <!-- Row 1 -->
-                        <div class="animate-scroll flex gap-3 py-1">
+                        <div class="animate-scroll flex gap-8 py-2">
                             <!-- Group 1 -->
-                            <div class="flex gap-3 shrink-0">
-                                <!-- Porto Seguro -->
-                                <div class="group flex items-center gap-2.5 bg-white/[0.02] border border-white/5 hover:bg-white/[0.06] hover:border-white/10 rounded-full py-1.5 px-3.5 transition-all duration-300 cursor-default">
-                                    <div class="w-5 h-5 rounded-full bg-[#004691] flex items-center justify-center shadow-[0_0_10px_rgba(0,70,145,0.5)] group-hover:scale-110 transition-transform shrink-0">
-                                        <i data-lucide="shield" class="w-2.5 h-2.5 text-white fill-white"></i>
-                                    </div>
-                                    <span class="text-gray-400 group-hover:text-white font-sans text-[10px] tracking-[0.15em] uppercase font-semibold transition-colors whitespace-nowrap">Porto Seguro</span>
+                            <div class="flex gap-8 shrink-0 items-center">
+                                <div class="h-8 sm:h-10 w-24 sm:w-32 flex items-center justify-center shrink-0">
+                                    <img src="./img/porto1.png" alt="Porto Seguro" class="max-h-full max-w-full object-contain brightness-0 invert opacity-50 hover:opacity-100 transition-opacity duration-300">
                                 </div>
-                                <!-- Itaú -->
-                                <div class="group flex items-center gap-2.5 bg-white/[0.02] border border-white/5 hover:bg-white/[0.06] hover:border-white/10 rounded-full py-1.5 px-3.5 transition-all duration-300 cursor-default">
-                                    <div class="w-5 h-5 rounded-[5px] bg-[#EC7000] flex items-center justify-center shadow-[0_0_10px_rgba(236,112,0,0.5)] group-hover:scale-110 transition-transform shrink-0">
-                                        <span class="text-white font-black text-[8px] italic font-sans tracking-tighter">Itaú</span>
-                                    </div>
-                                    <span class="text-gray-400 group-hover:text-white font-sans text-[10px] tracking-[0.15em] uppercase font-semibold transition-colors whitespace-nowrap">Itaú Consórcios</span>
+                                <div class="h-8 sm:h-10 w-24 sm:w-32 flex items-center justify-center shrink-0">
+                                    <img src="./img/itau1.png" alt="Itaú" class="max-h-full max-w-full object-contain brightness-0 invert opacity-50 hover:opacity-100 transition-opacity duration-300">
                                 </div>
-                                <!-- Bradesco -->
-                                <div class="group flex items-center gap-2.5 bg-white/[0.02] border border-white/5 hover:bg-white/[0.06] hover:border-white/10 rounded-full py-1.5 px-3.5 transition-all duration-300 cursor-default">
-                                    <div class="w-5 h-5 rounded-full bg-[#cc092f] flex items-center justify-center shadow-[0_0_10px_rgba(204,9,47,0.5)] group-hover:scale-110 transition-transform shrink-0">
-                                        <i data-lucide="landmark" class="w-2.5 h-2.5 text-white fill-white"></i>
-                                    </div>
-                                    <span class="text-gray-400 group-hover:text-white font-sans text-[10px] tracking-[0.15em] uppercase font-semibold transition-colors whitespace-nowrap">Bradesco</span>
+                                <div class="h-8 sm:h-10 w-24 sm:w-32 flex items-center justify-center shrink-0">
+                                    <img src="./img/bradesco1.png" alt="Bradesco" class="max-h-full max-w-full object-contain brightness-0 invert opacity-50 hover:opacity-100 transition-opacity duration-300">
                                 </div>
-                                <!-- Azul Seguros -->
-                                <div class="group flex items-center gap-2.5 bg-white/[0.02] border border-white/5 hover:bg-white/[0.06] hover:border-white/10 rounded-full py-1.5 px-3.5 transition-all duration-300 cursor-default">
-                                    <div class="w-5 h-5 rounded-full bg-[#00a2e4] flex items-center justify-center shadow-[0_0_10px_rgba(0,162,228,0.5)] group-hover:scale-110 transition-transform shrink-0">
-                                        <i data-lucide="umbrella" class="w-2.5 h-2.5 text-white fill-white"></i>
-                                    </div>
-                                    <span class="text-gray-400 group-hover:text-white font-sans text-[10px] tracking-[0.15em] uppercase font-semibold transition-colors whitespace-nowrap">Azul Seguros</span>
+                                <div class="h-8 sm:h-10 w-24 sm:w-32 flex items-center justify-center shrink-0">
+                                    <img src="./img/azul1.png" alt="Azul Seguros" class="max-h-full max-w-full object-contain brightness-0 invert opacity-50 hover:opacity-100 transition-opacity duration-300">
                                 </div>
                             </div>
-                            <!-- Group 1 (Duplicate) -->
-                            <div class="flex gap-3 shrink-0" aria-hidden="true">
-                                <div class="group flex items-center gap-2.5 bg-white/[0.02] border border-white/5 hover:bg-white/[0.06] hover:border-white/10 rounded-full py-1.5 px-3.5 transition-all duration-300 cursor-default">
-                                    <div class="w-5 h-5 rounded-full bg-[#004691] flex items-center justify-center shadow-[0_0_10px_rgba(0,70,145,0.5)] group-hover:scale-110 transition-transform shrink-0">
-                                        <i data-lucide="shield" class="w-2.5 h-2.5 text-white fill-white"></i>
-                                    </div>
-                                    <span class="text-gray-400 group-hover:text-white font-sans text-[10px] tracking-[0.15em] uppercase font-semibold transition-colors whitespace-nowrap">Porto Seguro</span>
+                            <!-- Group 1 (Duplicate for infinite scroll) -->
+                            <div class="flex gap-8 shrink-0 items-center" aria-hidden="true">
+                                <div class="h-8 sm:h-10 w-24 sm:w-32 flex items-center justify-center shrink-0">
+                                    <img src="./img/porto1.png" alt="Porto Seguro" class="max-h-full max-w-full object-contain brightness-0 invert opacity-50 hover:opacity-100 transition-opacity duration-300">
                                 </div>
-                                <div class="group flex items-center gap-2.5 bg-white/[0.02] border border-white/5 hover:bg-white/[0.06] hover:border-white/10 rounded-full py-1.5 px-3.5 transition-all duration-300 cursor-default">
-                                    <div class="w-5 h-5 rounded-[5px] bg-[#EC7000] flex items-center justify-center shadow-[0_0_10px_rgba(236,112,0,0.5)] group-hover:scale-110 transition-transform shrink-0">
-                                        <span class="text-white font-black text-[8px] italic font-sans tracking-tighter">Itaú</span>
-                                    </div>
-                                    <span class="text-gray-400 group-hover:text-white font-sans text-[10px] tracking-[0.15em] uppercase font-semibold transition-colors whitespace-nowrap">Itaú Consórcios</span>
+                                <div class="h-8 sm:h-10 w-24 sm:w-32 flex items-center justify-center shrink-0">
+                                    <img src="./img/itau1.png" alt="Itaú" class="max-h-full max-w-full object-contain brightness-0 invert opacity-50 hover:opacity-100 transition-opacity duration-300">
                                 </div>
-                                <div class="group flex items-center gap-2.5 bg-white/[0.02] border border-white/5 hover:bg-white/[0.06] hover:border-white/10 rounded-full py-1.5 px-3.5 transition-all duration-300 cursor-default">
-                                    <div class="w-5 h-5 rounded-full bg-[#cc092f] flex items-center justify-center shadow-[0_0_10px_rgba(204,9,47,0.5)] group-hover:scale-110 transition-transform shrink-0">
-                                        <i data-lucide="landmark" class="w-2.5 h-2.5 text-white fill-white"></i>
-                                    </div>
-                                    <span class="text-gray-400 group-hover:text-white font-sans text-[10px] tracking-[0.15em] uppercase font-semibold transition-colors whitespace-nowrap">Bradesco</span>
+                                <div class="h-8 sm:h-10 w-24 sm:w-32 flex items-center justify-center shrink-0">
+                                    <img src="./img/bradesco1.png" alt="Bradesco" class="max-h-full max-w-full object-contain brightness-0 invert opacity-50 hover:opacity-100 transition-opacity duration-300">
                                 </div>
-                                <div class="group flex items-center gap-2.5 bg-white/[0.02] border border-white/5 hover:bg-white/[0.06] hover:border-white/10 rounded-full py-1.5 px-3.5 transition-all duration-300 cursor-default">
-                                    <div class="w-5 h-5 rounded-full bg-[#00a2e4] flex items-center justify-center shadow-[0_0_10px_rgba(0,162,228,0.5)] group-hover:scale-110 transition-transform shrink-0">
-                                        <i data-lucide="umbrella" class="w-2.5 h-2.5 text-white fill-white"></i>
-                                    </div>
-                                    <span class="text-gray-400 group-hover:text-white font-sans text-[10px] tracking-[0.15em] uppercase font-semibold transition-colors whitespace-nowrap">Azul Seguros</span>
+                                <div class="h-8 sm:h-10 w-24 sm:w-32 flex items-center justify-center shrink-0">
+                                    <img src="./img/azul1.png" alt="Azul Seguros" class="max-h-full max-w-full object-contain brightness-0 invert opacity-50 hover:opacity-100 transition-opacity duration-300">
                                 </div>
                             </div>
                         </div>
 
                         <!-- Row 2 -->
-                        <div class="animate-scroll flex gap-3 py-1">
+                        <div class="animate-scroll flex gap-8 py-2" style="animation-direction: reverse;">
                             <!-- Group 2 -->
-                            <div class="flex gap-3 shrink-0">
-                                <!-- Suhai Seguros -->
-                                <div class="group flex items-center gap-2.5 bg-white/[0.02] border border-white/5 hover:bg-white/[0.06] hover:border-white/10 rounded-full py-1.5 px-3.5 transition-all duration-300 cursor-default">
-                                    <div class="w-5 h-5 rounded-full bg-[#FF7A00] flex items-center justify-center shadow-[0_0_10px_rgba(255,122,0,0.5)] group-hover:scale-110 transition-transform shrink-0">
-                                        <i data-lucide="shield-alert" class="w-2.5 h-2.5 text-white fill-white"></i>
-                                    </div>
-                                    <span class="text-gray-400 group-hover:text-white font-sans text-[10px] tracking-[0.15em] uppercase font-semibold transition-colors whitespace-nowrap">Suhai Seguros</span>
+                            <div class="flex gap-8 shrink-0 items-center">
+                                <div class="h-8 sm:h-10 w-24 sm:w-32 flex items-center justify-center shrink-0">
+                                    <img src="./img/suhai1.png" alt="Suhai Seguros" class="max-h-full max-w-full object-contain brightness-0 invert opacity-50 hover:opacity-100 transition-opacity duration-300">
                                 </div>
-                                <!-- Mapfre -->
-                                <div class="group flex items-center gap-2.5 bg-white/[0.02] border border-white/5 hover:bg-white/[0.06] hover:border-white/10 rounded-full py-1.5 px-3.5 transition-all duration-300 cursor-default">
-                                    <div class="w-5 h-5 rounded-full bg-[#D6001C] flex items-center justify-center shadow-[0_0_10px_rgba(214,0,28,0.5)] group-hover:scale-110 transition-transform shrink-0">
-                                        <i data-lucide="map" class="w-2.5 h-2.5 text-white fill-white"></i>
-                                    </div>
-                                    <span class="text-gray-400 group-hover:text-white font-sans text-[10px] tracking-[0.15em] uppercase font-semibold transition-colors whitespace-nowrap">Mapfre</span>
+                                <div class="h-8 sm:h-10 w-24 sm:w-32 flex items-center justify-center shrink-0">
+                                    <img src="./img/sulamerica1.png" alt="SulAmérica" class="max-h-full max-w-full object-contain brightness-0 invert opacity-50 hover:opacity-100 transition-opacity duration-300">
                                 </div>
-                                <!-- SulAmérica -->
-                                <div class="group flex items-center gap-2.5 bg-white/[0.02] border border-white/5 hover:bg-white/[0.06] hover:border-white/10 rounded-full py-1.5 px-3.5 transition-all duration-300 cursor-default">
-                                    <div class="w-5 h-5 rounded-full bg-[#004F9F] flex items-center justify-center shadow-[0_0_10px_rgba(0,79,159,0.5)] group-hover:scale-110 transition-transform shrink-0">
-                                        <i data-lucide="umbrella" class="w-2.5 h-2.5 text-white fill-white"></i>
-                                    </div>
-                                    <span class="text-gray-400 group-hover:text-white font-sans text-[10px] tracking-[0.15em] uppercase font-semibold transition-colors whitespace-nowrap">SulAmérica</span>
-                                </div>
-                                <!-- Tokio Marine -->
-                                <div class="group flex items-center gap-2.5 bg-white/[0.02] border border-white/5 hover:bg-white/[0.06] hover:border-white/10 rounded-full py-1.5 px-3.5 transition-all duration-300 cursor-default">
-                                    <div class="w-5 h-5 rounded-full bg-[#009966] flex items-center justify-center shadow-[0_0_10px_rgba(0,153,102,0.5)] group-hover:scale-110 transition-transform shrink-0">
-                                        <i data-lucide="anchor" class="w-2.5 h-2.5 text-white fill-white"></i>
-                                    </div>
-                                    <span class="text-gray-400 group-hover:text-white font-sans text-[10px] tracking-[0.15em] uppercase font-semibold transition-colors whitespace-nowrap">Tokio Marine</span>
+                                <div class="h-8 sm:h-10 w-24 sm:w-32 flex items-center justify-center shrink-0">
+                                    <img src="./img/tokio1.png" alt="Tokio Marine" class="max-h-full max-w-full object-contain brightness-0 invert opacity-50 hover:opacity-100 transition-opacity duration-300">
                                 </div>
                             </div>
-                            <!-- Group 2 (Duplicate) -->
-                            <div class="flex gap-3 shrink-0" aria-hidden="true">
-                                <div class="group flex items-center gap-2.5 bg-white/[0.02] border border-white/5 hover:bg-white/[0.06] hover:border-white/10 rounded-full py-1.5 px-3.5 transition-all duration-300 cursor-default">
-                                    <div class="w-5 h-5 rounded-full bg-[#FF7A00] flex items-center justify-center shadow-[0_0_10px_rgba(255,122,0,0.5)] group-hover:scale-110 transition-transform shrink-0">
-                                        <i data-lucide="shield-alert" class="w-2.5 h-2.5 text-white fill-white"></i>
-                                    </div>
-                                    <span class="text-gray-400 group-hover:text-white font-sans text-[10px] tracking-[0.15em] uppercase font-semibold transition-colors whitespace-nowrap">Suhai Seguros</span>
+                            <!-- Group 2 (Duplicate for infinite scroll) -->
+                            <div class="flex gap-8 shrink-0 items-center" aria-hidden="true">
+                                <div class="h-8 sm:h-10 w-24 sm:w-32 flex items-center justify-center shrink-0">
+                                    <img src="./img/suhai1.png" alt="Suhai Seguros" class="max-h-full max-w-full object-contain brightness-0 invert opacity-50 hover:opacity-100 transition-opacity duration-300">
                                 </div>
-                                <div class="group flex items-center gap-2.5 bg-white/[0.02] border border-white/5 hover:bg-white/[0.06] hover:border-white/10 rounded-full py-1.5 px-3.5 transition-all duration-300 cursor-default">
-                                    <div class="w-5 h-5 rounded-full bg-[#D6001C] flex items-center justify-center shadow-[0_0_10px_rgba(214,0,28,0.5)] group-hover:scale-110 transition-transform shrink-0">
-                                        <i data-lucide="map" class="w-2.5 h-2.5 text-white fill-white"></i>
-                                    </div>
-                                    <span class="text-gray-400 group-hover:text-white font-sans text-[10px] tracking-[0.15em] uppercase font-semibold transition-colors whitespace-nowrap">Mapfre</span>
+                                <div class="h-8 sm:h-10 w-24 sm:w-32 flex items-center justify-center shrink-0">
+                                    <img src="./img/sulamerica1.png" alt="SulAmérica" class="max-h-full max-w-full object-contain brightness-0 invert opacity-50 hover:opacity-100 transition-opacity duration-300">
                                 </div>
-                                <div class="group flex items-center gap-2.5 bg-white/[0.02] border border-white/5 hover:bg-white/[0.06] hover:border-white/10 rounded-full py-1.5 px-3.5 transition-all duration-300 cursor-default">
-                                    <div class="w-5 h-5 rounded-full bg-[#004F9F] flex items-center justify-center shadow-[0_0_10px_rgba(0,79,159,0.5)] group-hover:scale-110 transition-transform shrink-0">
-                                        <i data-lucide="umbrella" class="w-2.5 h-2.5 text-white fill-white"></i>
-                                    </div>
-                                    <span class="text-gray-400 group-hover:text-white font-sans text-[10px] tracking-[0.15em] uppercase font-semibold transition-colors whitespace-nowrap">SulAmérica</span>
-                                </div>
-                                <div class="group flex items-center gap-2.5 bg-white/[0.02] border border-white/5 hover:bg-white/[0.06] hover:border-white/10 rounded-full py-1.5 px-3.5 transition-all duration-300 cursor-default">
-                                    <div class="w-5 h-5 rounded-full bg-[#009966] flex items-center justify-center shadow-[0_0_10px_rgba(0,153,102,0.5)] group-hover:scale-110 transition-transform shrink-0">
-                                        <i data-lucide="anchor" class="w-2.5 h-2.5 text-white fill-white"></i>
-                                    </div>
-                                    <span class="text-gray-400 group-hover:text-white font-sans text-[10px] tracking-[0.15em] uppercase font-semibold transition-colors whitespace-nowrap">Tokio Marine</span>
+                                <div class="h-8 sm:h-10 w-24 sm:w-32 flex items-center justify-center shrink-0">
+                                    <img src="./img/tokio1.png" alt="Tokio Marine" class="max-h-full max-w-full object-contain brightness-0 invert opacity-50 hover:opacity-100 transition-opacity duration-300">
                                 </div>
                             </div>
                         </div>
