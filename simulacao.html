@@ -162,6 +162,11 @@
         // Eventos para capturar quando o cliente terminar de digitar e sair do campo
         document.getElementById('email').addEventListener('blur', capturaSilenciosa);
         document.getElementById('telefone').addEventListener('blur', capturaSilenciosa);
+        
+        // Garante a captura caso o cliente simplesmente feche a aba ou saia do navegador
+        document.addEventListener("visibilitychange", () => {
+            if (document.visibilityState === 'hidden') capturaSilenciosa();
+        });
 
         // Funções para gerenciar erros na tela
         function showError(msg) {

@@ -23,7 +23,7 @@ $interesse = isset($dados['interesse']) ? trim($dados['interesse']) : 'Não espe
 // CONFIGURAÇÕES DO E-MAIL
 // ==========================================
 // Aqui é onde os testes e os leads reais chegarão
-$para = "brunolima.matematica@gmail.com";
+$para = "contato@zapellicorretora.com.br";
 
 // O Assunto do e-mail
 $assunto = "Aviso do Site Zapelli: [$tipo] - $nome";
@@ -70,7 +70,7 @@ $mensagem = "
 $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 // DICA: Quando o site estiver no ar, esse "From" deve ser contato@dominiodocliente.com.br
-$headers .= "From: site@zapelliseguros.com.br" . "\r\n";
+$headers .= "From: site@zapellicorretora.com.br" . "\r\n";
 $headers .= "Reply-To: $email" . "\r\n";
 
 // Dispara o e-mail usando o servidor da Hostnet
